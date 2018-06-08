@@ -1,0 +1,17 @@
+.usrcls{
+ background-color: beige;
+ color: blue;
+ border: 1px solid red;
+}
+.usrtitle{
+    color: seagreen;
+    font-weight: bold;
+
+}
+h2{
+    color: crimson;
+}
+.sclusr{
+    color: crimson;
+    font-size: 20px; 
+}

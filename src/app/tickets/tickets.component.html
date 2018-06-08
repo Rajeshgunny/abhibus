@@ -1,0 +1,10 @@
+<div class="mntcls"> Months :
+    <select (change) = "changemonths($event)" >
+       <option *ngFor="let i of months" [value]="i"  >{{i}}</option>
+    </select>
+ </div>
+
+<div *ngIf = "isavailable;">
+ <h3 >Selected Month : <span class="spncls">{{selval}}</span></h3>
+ <button (click)="goBack()">go back</button>
+</div>

@@ -1,0 +1,15 @@
+
+<table align="center" >
+    <h2>My Users</h2>
+<tr class="usrtitle">
+  <td> User Id </td>
+  <td> User Name </td>
+</tr>
+<tr *ngFor="let user of users" class="usrcls" [class.selected]="user === selectedUser"
+(click)="onSelect(user.name)">
+<td >{{user.id}}</td>
+<td>{{user.name}}</td>
+</tr>
+
+</table>
+<h3 *ngIf="selectedUser">Selected User : <span class="sclusr">{{selectedUser}}</span></h3>

@@ -1,0 +1,14 @@
+<p>
+  login works!
+</p>
+<div>
+    <label>username:
+      <input [(ngModel)]="user.username" placeholder="name">
+    </label>
+    <label>password:
+        <input [(ngModel)]="user.password" placeholder="password" type="password">
+      </label>
+     
+</div>
+<button (click)="onSubmit(user)">save</button>
+{{token}}
