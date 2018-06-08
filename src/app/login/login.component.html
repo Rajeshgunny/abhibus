@@ -5,10 +5,16 @@
     <label>username:
       <input [(ngModel)]="user.username" placeholder="name">
     </label>
+ <br/>
+ <br/>
     <label>password:
         <input [(ngModel)]="user.password" placeholder="password" type="password">
       </label>
      
 </div>
+<br/>
 <button (click)="onSubmit(user)">save</button>
-{{token}}
+
+<span *ngIf = "isavailable;">
+Token : {{token}}
+</span>
