@@ -12,26 +12,18 @@ export class AboutComponent implements OnInit {
   username;
   ngOnInit() {
     let body="token="+localStorage.getItem('token');
-    this.http.post(this.BaseUrl, body,{
-      headers: new Headers({'Content-Type': 'application/x-www-form-urlencoded'})).
-       subscribe((data) => {
-        //console.log(JSON.parse(data._body));
-       let resJSON = JSON.parse(data._body);
-       //console.log(resJSON);
-        this.username= resJSON.name;
-        /*if(resJSON['name']==""){
-          alert("Invalid User");
-        }else{
-        //localStorage.setItem('token', resJSON['token']);
-        //console.log(localStorage.getItem('token'));
-        //this.token=localStorage.getItem('token');
-       // this.isavailable = true;
-        //console.log(resJSON['token']);
-        }*/
-      })   
-   }
+   this.http.post(this.BaseUrl, body,{
+    headers: new Headers({'Content-Type': 'application/x-www-form-urlencoded'})).
+     subscribe((data) => {
+      let resJSON = JSON.parse(data._body);
+      this.username= resJSON.name;
+    })   
+ }
+
+
+
   }
  
 
 
-}
+
